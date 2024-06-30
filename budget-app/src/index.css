@@ -76,7 +76,7 @@ nav span{
 }
 
 .sidebar-menu li a:hover{
-  color: rgb(45, 209, 67);
+  color: deeppink;
   border: 1px solid white;
 }
 
@@ -135,3 +135,4 @@ section h1{
 section h1.dark-mode{
   color: white;
 }
+

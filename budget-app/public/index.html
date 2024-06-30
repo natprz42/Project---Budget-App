@@ -10,67 +10,34 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../src/index.css">
-    <title>Piggy</title>
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-<!--    <div class="sidebar">
-      <div class="top">
-        <div class="logo">
-          <img src="../src/images/Logo.png" class="logo" alt="logo">
-          <i class="fa-solid fa-bars" id="btn-nav"></i>
-        </div>
-        <ul>
-          <li>
-            <a href="#">
-              <i class="fa-solid fa-house"></i>
-              <span class="nav-item">Dashboard</span>
-            </a>
-            <span>Dashboard</span>
-          </li>
-        </ul>
-      </div>
-    </div>-->
-    <nav>
-      <button type="button" id="toggle-btn">
-        <i class="fa fa-bars"></i>
-      </button>
-      <img src="../src/images/Logo.png" class="logo" alt="logo">
-      <ul class="sidebar-menu">
-        <li><a href="#"><i class="fa fa-home"></i>Dashboard</a></li>
-        <li><a href="#"><i class="fa-regular fa-rectangle-list"></i>Transactions</a></li>
-        <li><a href="#"><i class="fa-solid fa-wallet"></i>Wallets</a></li>
-        <li><a href="#"><i class="fa-solid fa-chart-line"></i>Stats</a></li>
-        <li id="bgModeBtn"><a href="#"><i id="bgModeIcon" class="fa fa-sun-o"></i>Mode</a></li>
-      </ul>
-    </nav>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
   </body>
-  <script>
-    const nav = document.querySelector('nav');
-    const toggle_btn = document.getElementById('toggle-btn');
-    const content = document.querySelector('section');
-
-    toggle_btn.onclick = function() {
-      nav.classList.toggle('hide');
-      content.classList.toggle('expand');
-    };
-
-    const body = document.querySelector('body');
-    const bgModeBtn = document.getElementById('bgModeBtn');
-    const bgModeIcon = document.getElementById('bgModeIcon');
-    const sectionHeader = document.querySelector('section h1');
-
-    bgModeBtn.onclick = function(){
-      body.classList.toggle("dark-mode");
-      bgModeIcon.classList.toggle("fa-sun-o");
-      bgModeIcon.classList.toggle("fa-moon-o");
-      sectionHeader.classList.toggle("dark-mode");
-    }
-  </script>
 </html>

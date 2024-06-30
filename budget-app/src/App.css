@@ -1,38 +1,162 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+#sidebar {
+    background: mintcream;
+    height: 100vh;
+    width: 200px;
+    transition: 0.4s all linear;
+    position: fixed;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav a {
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.4s all ease;
+}
+
+.nav a:hover {
+    background: #bf4da54f;
+    border-left: 5px solid #fcde59;
+}
+.nav a {
+    color: #2e2e2e;
+}
+
+.toggle-btn {
+    cursor: pointer;
+    padding: 1rem 0.8rem;
+}
+
+.toggle-btn span {
+    display: block;
+    background: lightpink;
+    height: 4px;
+    width: 30px;
+    margin: 0.3rem 0;
+    border-radius: 8px;
+}
+
+#sidebar.active {
+    margin-left: -200px;
+}
+
 .App {
-  text-align: center;
+    padding: 1rem 0.8rem;
+    margin-top: 5rem;
+}
+.content {
+    margin-left: 200px;
+    transition: 0.4s all linear;
+}
+.content.active {
+    margin-left: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.brand {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    background: #34495e;
+    width: 100%;
+    padding: 5px;
+    z-index: 100;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.income-tracker>button {
+    background-color: blue;
+    padding: 10px 10px;
+    color: white;
+    border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.income-tracker>input {
+    border: 2px solid rgb(161, 157, 157);
+    margin: 2px 6px;
 }
 
-.App-link {
-  color: #61dafb;
+.App {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    /* White background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Subtle box shadow */
+    border-radius: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+    text-align: center;
+    color: #007bff;
+    /* Blue color for headings */
+}
+
+.tracker-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.tracker-container>div {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #31aa6d;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    /* Light gray border */
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.input-group button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Smooth background color transition */
+}
+
+.input-group button:hover {
+    background-color: #0056b3;
 }
