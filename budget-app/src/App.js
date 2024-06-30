@@ -52,13 +52,15 @@ function App() {
 
 
     return (
-        <div className="App">
+        <div>
             <Navbar/>
+        <div className="App">
             <h1>Piggy</h1>
             <div className="tracker-container">
                 <Expense onAddExpense={addExpense} />
                 <Income onAddIncome={addIncome} />
             </div>
+        </div>
         </div>
     );
 }
