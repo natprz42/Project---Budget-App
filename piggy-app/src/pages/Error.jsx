@@ -1,5 +1,6 @@
 import React from 'react';
 import './error.css';
+import { NavLink } from "react-router-dom"
 const Error = () => {
     return (
         <div>
@@ -18,9 +19,9 @@ const Error = () => {
                 <div className="error__title">404</div>
                 <div className="error__subtitle">Hmmm...</div>
                 <div className="error__description">It looks like you're lost. The page you are looking for not available!</div>
-                <a href="localhost:5173">
+                <NavLink to="/">
                     <button className="error__button error__button--active">GO HOME</button>
-                </a>
+                </NavLink>
 
             </div>
 
